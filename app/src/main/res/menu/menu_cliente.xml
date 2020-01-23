@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+
+    <item
+        android:id="@+id/itemMenuClienteDireccionDeEntrega"
+        android:icon="@drawable/ic_map_blue_24dp"
+        android:title="@string/textoDireccionDeEntrega"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/itemMenuClienteCarritoDeCompras"
+        android:icon="@drawable/ic_shopping_cart_green_24dp"
+        android:title="@string/textoCarritoDeCompras"
+        app:showAsAction="ifRoom"
+        />
+
+
+
+    <item
+        android:id="@+id/itemMenuClienteSalir"
+        android:title="@string/stringSalir"
+        app:showAsAction="never"
+        />
+
+
+
+</menu>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorSecundary">#3da4ab</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorNegro">#2b2926</color>
+
+
+    <color name="colorGrisClaro">#020000</color>
+
+    <color name="colorVioletaPastel">#Dd1dd0</color>
+
+
+
+    <color name="colorAmarilloOpaco">#ffffaf</color>
+
+    <color name="colorAmarilloSucio">#f7f586</color>
+    <color name="colorVerdeOpaco">#d0f786</color>
+    <color name="colorVerde">#33cc33</color>
+    <color name="colorAzul">#0095ff</color>
+    <color name="colorCeleeste">#4cffba</color>
+    <color name="colorAzulPastel">#66a3ff</color>
+    <color name="colorCeleestePastel">#cdf0f7</color>
+    <color name="colorAzulMarino">#000099</color>
+    <color name="colorBlancoTransparente">#80ffffff</color>
+    <color name="colorGrisLuz">#c6d2e1</color>
+    <color name="colorAzulOscuro">#537880</color>
+    <color name="colorVerdeOscuro">#149129</color>
+    <color name="colorRojoPastel">#fc9aa4</color>
+    <color name="colorGrisAzul">#a3a5a8</color>
+
+    <color name="colorGrisOscuro">#424242</color>
+
+
+    <color name="colorBlanco">#f0f6f7</color>  <!--f0f6f7-->
+
+    <color name="colorTabText">#FFFFFF</color>
+    <color name="colorTabTextWhiteTransparent">#99FFFFFF</color>
+    <color name="colorTabIndicator">#ff6f00</color>
+
+
+    <color name="colorFondoClaro">#F5F5F5</color>
+
+
+
+
+    <!--
+  PANTONE P 10-4 C / #F4D389
+pantone p 10-8 C / #EFB71B
+PANTONE P 11-8 C / #BA8C0D
+
+
+  -->
+    <color name="doradoP10_4C">#F4D389</color>
+    <color name="doradoP10_8C">#EFB71B</color>
+    <color name="doradoP11_8C">#BA8C0D</color>
+
+
+    <color name="doradoNombreEmpresa">#BA8C0D</color>
+
+
+    <!--
+P 103-16 U / #514756
+P 101-16 C / #2D2147
+-->
+    <color name="azulP103_16U">#514756</color>
+    <color name="azulP101_16C">#2D2147</color>
+
+</resources>
