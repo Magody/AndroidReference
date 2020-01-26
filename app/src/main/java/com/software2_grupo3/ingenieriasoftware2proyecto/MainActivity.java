@@ -1,18 +1,19 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Utilidad;
@@ -22,7 +23,6 @@ import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloHome.InicioFragmen
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloPedido.PedidoFragment;
 
 import static android.util.Log.d;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,7 +42,14 @@ public class MainActivity extends AppCompatActivity {
         configurarToolBar();
         inicializarVariables();
         crearBottomNav();
+
+        //juan
+        FragmentManager fm = getSupportFragmentManager();
+       // fm.beginTransaction().replace(R.id.escenario, new SesionFragment()).commit();
+        //Juan
     }
+
+
 
 
     private void inicializarVariables(){
@@ -140,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
         finish();
         d(TAG, "cerrarAplicacion: " + "Cerrando la aplicación");
     }
+
+
 
 
 }
