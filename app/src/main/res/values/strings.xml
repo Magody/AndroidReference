@@ -18,6 +18,13 @@
     <string name="stringVolver">Volver</string>
     <string name="stringConfirmar">Confirmar</string>
     <string name="stringAceptar">Aceptar</string>
+    <string name="stringGenerarPedido">Generar Pedido</string>
+    <string name="stringAtras">ATRAS</string>
+    <string name="stringNumeroPedido">###</string>
+    <string name="stringEstado">Estado:</string>
+    <string name="stringEstablecimiento">En Establecimiento</string>
+    <string name="stringRecogido">Recogido</string>
+    <string name="stringEntregado">Entregado</string>
 
 
     <!--Texto-->
@@ -28,6 +35,7 @@
     Cuando finalice presione el botón de Confirmar</string>
     <string name="textoTituloPermisoDeUbicacion">Permisos de ubicacion</string>
     <string name="textoUbicacionActual">Ubicación actual</string>
+    <string name="stringIndicarNumero">Su número de pedido es:</string>
 
 
     <!--Mensajes-->
@@ -38,6 +46,7 @@
 
     <!--Errores-->
     <string name="errorNoSePudoLeerLaPosicion">Hubo un error al leer la posición, reinicie la aplicación y asegúrese de activar el GPS.</string>
+
 
 
 </resources>
