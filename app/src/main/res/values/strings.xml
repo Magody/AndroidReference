@@ -45,6 +45,12 @@
     <string name="iniciar_sesion">Iniciar Sesion</string>
     <string name="password">Password</string>
     <string name="usuario">Usuario</string>
+    <string name="nombres">Nombres:</string>
+    <string name="correo">Correo:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="cedula">Cedula:</string>
+    <string name="fecha_de_nacimiento">Fecha De Nacimiento:</string>
+    <string name="telefono">Telefono:</string>
 
 
 </resources>

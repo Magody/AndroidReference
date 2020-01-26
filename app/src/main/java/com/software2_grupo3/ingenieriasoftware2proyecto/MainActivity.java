@@ -45,8 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
         //juan
         FragmentManager fm = getSupportFragmentManager();
-       // fm.beginTransaction().replace(R.id.escenario, new SesionFragment()).commit();
+        //fm.beginTransaction().replace(R.id.escenario, new SesionFragment()).commit();
         //Juan
+
     }
 
 
