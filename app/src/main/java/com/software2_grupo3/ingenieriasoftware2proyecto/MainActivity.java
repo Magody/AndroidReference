@@ -12,14 +12,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Utilidad;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloCuenta.CuentaFragment;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloGeografia.DireccionDeEntregaActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloHome.InicioFragment;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloPedido.PedidoFragment;
+import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloSeguimiento.CarritoActivity;
 
 import static android.util.Log.d;
 
@@ -119,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
         switch (id) {
 
             case R.id.itemMenuClienteCarritoDeCompras:
-                Utilidad.mostrarToast(this, ""+1, Toast.LENGTH_SHORT);
+                //Utilidad.mostrarToast(this, ""+1, Toast.LENGTH_SHORT);
+                startActivity(new Intent(this, CarritoActivity.class));
                 return true;
             case R.id.itemMenuClienteDireccionDeEntrega:
                 startActivity(new Intent(this, DireccionDeEntregaActivity.class));
