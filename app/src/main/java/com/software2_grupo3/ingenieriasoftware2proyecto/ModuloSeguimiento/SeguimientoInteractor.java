@@ -1,6 +1,7 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.ModuloSeguimiento;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiClient;
@@ -31,7 +32,7 @@ public class SeguimientoInteractor implements SeguimientoContracts.Interactor {
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
-        Call<Pedido> call = apiInterface.generarCodigo("JJM", "admin", 1);
+        Call<Pedido> call = apiInterface.generarCodigo("BBB", "admin", 0);
         call.enqueue(new Callback<Pedido>() {
             @Override
             public void onResponse(Call<Pedido> call, Response<Pedido> response) {
@@ -47,6 +48,30 @@ public class SeguimientoInteractor implements SeguimientoContracts.Interactor {
             public void onFailure(Call<Pedido> call, Throwable t) {
                 callbackSeguimientoPresentador.generarFallido(t.toString());
                 Log.e(TAG, "generarCodigo: onFailure" + t.toString());
+            }
+        });
+    }
+
+    @Override
+    public void cambiarEstado(String codigo, int estado) {
+        ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
+        Call<Pedido> call = apiInterface.cambiarEstado(codigo, estado);
+        call.enqueue(new Callback<Pedido>() {
+            @Override
+            public void onResponse(Call<Pedido> call, Response<Pedido> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    final Pedido pedido = response.body();
+                    callbackSeguimientoPresentador.generarExitoso("Codigo: " + pedido.codigo + " Estado: " + pedido.estado);
+                } else {
+                    callbackSeguimientoPresentador.generarFallido(context.getString(R.string.debugMsg));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Pedido> call, Throwable t) {
+                callbackSeguimientoPresentador.generarFallido(t.toString());
+                Log.e(TAG, "cambiarAtendido: onFailure" + t.toString());
             }
         });
     }

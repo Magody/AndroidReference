@@ -20,11 +20,13 @@
     <string name="stringAceptar">Aceptar</string>
     <string name="stringGenerarPedido">Generar Pedido</string>
     <string name="stringAtras">ATRAS</string>
-    <string name="stringNumeroPedido">###</string>
+    <string name="stringNumeroPedido">AAA</string>
     <string name="stringEstado">Estado:</string>
-    <string name="stringEstablecimiento">En Establecimiento</string>
-    <string name="stringRecogido">Recogido</string>
-    <string name="stringEntregado">Entregado</string>
+    <string name="stringAtendido">Atendido</string>
+    <string name="stringEnCamino">En Camino</string>
+    <string name="stringHaLlegado">Ha Llegado</string>
+    <string name="stringCambiarEstado">Cambiar Estado</string>
+
 
 
     <!--Texto-->

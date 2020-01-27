@@ -41,6 +41,9 @@
             android:name=".ModuloSeguimiento.SeguimientoActivity"
             android:label="Seguimiento" />
         <activity
+            android:name=".ModuloSeguimiento.CambiarEstadosActivity"
+            android:label="CambiarEstados" />
+        <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>

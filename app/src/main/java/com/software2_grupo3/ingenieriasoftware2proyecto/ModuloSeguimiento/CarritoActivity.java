@@ -1,6 +1,7 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.ModuloSeguimiento;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class CarritoActivity extends FragmentActivity implements SeguimientoCont
 
     ProgressBar progressBar;
     Button button;
+    Button botonCambiarEstado;
     SeguimientoContracts.Presentador seguimientoPresentador;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class CarritoActivity extends FragmentActivity implements SeguimientoCont
 
         progressBar = findViewById(R.id.progressBarCarrito);
         button = findViewById(R.id.buttonGenPedido);
+        botonCambiarEstado =  findViewById(R.id.buttonCambiarEstado);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,11 +36,6 @@ public class CarritoActivity extends FragmentActivity implements SeguimientoCont
                 seguimientoPresentador.botonGenerarCodigo();
             }
         });
-    }
-
-    public void abrirSeguimiento(View seguimiento) {
-        //startActivity(new Intent(this, SeguimientoActivity.class));
-        //seguimientoPresentador.botonGenerarCodigo();
     }
 
     @Override
@@ -53,5 +51,9 @@ public class CarritoActivity extends FragmentActivity implements SeguimientoCont
     @Override
     public void ocultarProgressBar() {
         progressBar.setVisibility(View.GONE);
+    }
+
+    public void mostrarCambiarEstado(View view){
+        startActivity(new Intent(this, CambiarEstadosActivity.class));
     }
 }

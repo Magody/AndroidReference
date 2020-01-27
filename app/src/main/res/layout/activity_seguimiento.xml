@@ -36,21 +36,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/stringEstablecimiento" />
+            android:text="@string/stringAtendido" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/stringRecogido" />
+            android:text="@string/stringEnCamino" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/stringEntregado" />
+            android:text="@string/stringHaLlegado" />
     </LinearLayout>
 
     <Button

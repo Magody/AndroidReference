@@ -23,9 +23,10 @@
         android:text="@string/stringGenerarPedido" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonCambiarEstado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/stringAtras" />
+        android:onClick="mostrarCambiarEstado"
+        android:text="@string/stringCambiarEstado" />
 
 </LinearLayout>

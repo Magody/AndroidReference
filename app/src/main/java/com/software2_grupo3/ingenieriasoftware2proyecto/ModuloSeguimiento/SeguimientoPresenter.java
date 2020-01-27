@@ -19,6 +19,26 @@ public class SeguimientoPresenter implements SeguimientoContracts.Presentador {
     }
 
     @Override
+    public void botonCambiarEstado() {
+
+    }
+
+    @Override
+    public void botonAtendido(String codigo) {
+        seguimientoInteractor.cambiarEstado(codigo, 1);
+    }
+
+    @Override
+    public void botonEnCamino(String codigo) {
+        seguimientoInteractor.cambiarEstado(codigo, 2);
+    }
+
+    @Override
+    public void botonHaLlegado(String codigo) {
+        seguimientoInteractor.cambiarEstado(codigo, 3);
+    }
+
+    @Override
     public void generarExitoso(String codigo) {
         seguimientoView.ocultarProgressBar();
         seguimientoView.mostrarMensaje(codigo);

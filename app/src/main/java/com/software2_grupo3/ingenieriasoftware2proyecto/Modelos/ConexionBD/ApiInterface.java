@@ -29,6 +29,15 @@ public interface ApiInterface {
                                @Field("cliente_usuario") String pedidoClienteUsuario,
                                @Field("estado") int pedidoEstado);
 
+    @FormUrlEncoded
+    @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_SEGUIMIENTO + "cambiarAtendido.php")
+    Call<Pedido> cambiarAtendido(@Field("codigo") String pedidoCodigo,
+                                 @Field("estado") int pedidoEstado);
+
+    @FormUrlEncoded
+    @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_SEGUIMIENTO + "cambiarAtendido.php")
+    Call<Pedido> cambiarEstado(@Field("codigo") String pedidoCodigo,
+                               @Field("estado") int pedidoEstado);
     /*
     @FormUrlEncoded
     @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_TEST+"crearPersona.php")
