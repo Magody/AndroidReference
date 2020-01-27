@@ -18,6 +18,15 @@
     <string name="stringVolver">Volver</string>
     <string name="stringConfirmar">Confirmar</string>
     <string name="stringAceptar">Aceptar</string>
+    <string name="stringGenerarPedido">Generar Pedido</string>
+    <string name="stringAtras">ATRAS</string>
+    <string name="stringNumeroPedido">AAA</string>
+    <string name="stringEstado">Estado:</string>
+    <string name="stringAtendido">Atendido</string>
+    <string name="stringEnCamino">En Camino</string>
+    <string name="stringHaLlegado">Ha Llegado</string>
+    <string name="stringCambiarEstado">Cambiar Estado</string>
+    <string name="stringDebug">Debugo</string>
 
 
     <!--Texto-->
@@ -28,7 +37,9 @@
     Cuando finalice presione el botón de Confirmar</string>
     <string name="textoTituloPermisoDeUbicacion">Permisos de ubicacion</string>
     <string name="textoUbicacionActual">Ubicación actual</string>
+    <string name="stringIndicarNumero">Su número de pedido es:</string>
 
+    <string name="textoFuncionDebug">Función de prueba</string>
 
     <!--Mensajes-->
     <string name="msgDebeAceptarElPermisoDeUbicacion">Debe aceptar los permisos para continuar</string>

@@ -1,11 +1,12 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -16,11 +17,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Utilidad;
+import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloAdministracion.Parametros;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloCuenta.CuentaFragment;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloGeografia.DireccionDeEntregaActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloHome.InicioFragment;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloPedido.PedidoFragment;
+import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloSeguimiento.CarritoActivity;
 
 import static android.util.Log.d;
 
@@ -129,7 +131,8 @@ public class MainActivity extends AppCompatActivity {
         switch (id) {
 
             case R.id.itemMenuClienteCarritoDeCompras:
-                Utilidad.mostrarToast(this, ""+1, Toast.LENGTH_SHORT);
+                //Utilidad.mostrarToast(this, ""+1, Toast.LENGTH_SHORT);
+                startActivity(new Intent(this, CarritoActivity.class));
                 return true;
             case R.id.itemMenuClienteDireccionDeEntrega:
                 startActivity(new Intent(this, DireccionDeEntregaActivity.class));
@@ -138,6 +141,17 @@ public class MainActivity extends AppCompatActivity {
             case R.id.itemMenuClienteSalir:
                 cerrarAplicacion();
                 return true;
+            case R.id.itemMenuClienteReiniciarSeguimiento:
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putString(Parametros.DIRECTORIO_CODIGO, null);
+
+                editor.apply();
+                return true;
+
+
+
             default:
                 Log.w(TAG, "onOptionsItemSelected: No se seleccionó un item previamente definido para el menu. HACK");
                 return super.onOptionsItemSelected(menuItem);
