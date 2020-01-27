@@ -16,8 +16,7 @@
         android:id="@+id/itemMenuClienteCarritoDeCompras"
         android:icon="@drawable/ic_shopping_cart_green_24dp"
         android:title="@string/textoCarritoDeCompras"
-        app:showAsAction="ifRoom"
-        />
+        app:showAsAction="ifRoom" />
 
 
 

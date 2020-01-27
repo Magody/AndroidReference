@@ -11,6 +11,7 @@ public class Parametros {
 
     public static final String DIRECTORIO_PROYECTO = " Ingenieria/Proyectos/IngSoftware2/HeySanta/";
     public static final String DIRECTORIO_MODULO_GEOGRAFIA = "ModuloGeografia/";
+    public static final String DIRECTORIO_MODULO_SEGUIMIENTO = "ModuloSeguimiento/";
 
     //Servicios
     public static final String CHANNEL1_ID = "CanalNotificacion1";
