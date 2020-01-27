@@ -10,12 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 
-public class MainRegistrarCliente extends AppCompatActivity implements MainContracts.View {
+public class RegistrarClienteActivity extends AppCompatActivity implements RegistrarClienteContracts.View {
 
     EditText txtUser, txtPwd, txtNombre, txtCorreo, txtdireccion, txtcedula, txttelefono, txtfechanacimiento, txttarjeta;
     Button btnRegistrar;
 
-    MainContracts.Presentador mainPresenter;
+    RegistrarClienteContracts.Presentador mainPresenter;
 
 
    protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MainRegistrarCliente extends AppCompatActivity implements MainContr
 
         btnRegistrar = findViewById(R.id.btnregistrar);
 
-        mainPresenter = new MainPresenter(this, this);
+        mainPresenter = new RegistrarClientePresenter(this, this);
 
         btnRegistrar.setOnClickListener(new View.OnClickListener(){
 

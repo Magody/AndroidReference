@@ -13,16 +13,16 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class MainInteractor extends MainRegistrarCliente implements MainContracts.Interactor {
+public class RegistrarClienteInteractorActivity extends RegistrarClienteActivity implements RegistrarClienteContracts.Interactor {
 
-    public static final String TAG = "MainInteractor";
+    public static final String TAG = "RegistrarClienteInteractorActivity";
 
     Context context;
 
-    MainContracts.Presentador callbackMainPresenter;
-    MainRegistrarCliente mainRegistrarCliente = new MainRegistrarCliente();
+    RegistrarClienteContracts.Presentador callbackMainPresenter;
+    RegistrarClienteActivity registrarClienteActivity = new RegistrarClienteActivity();
 
-    public MainInteractor(MainContracts.Presentador callbackMainPresenter, Context context){
+    public RegistrarClienteInteractorActivity(RegistrarClienteContracts.Presentador callbackMainPresenter, Context context){
         this.context = context;
         this.callbackMainPresenter = callbackMainPresenter;
     }

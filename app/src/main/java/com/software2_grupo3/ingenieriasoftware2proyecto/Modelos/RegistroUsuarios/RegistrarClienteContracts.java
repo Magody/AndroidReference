@@ -1,6 +1,6 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.RegistroUsuarios;
 
-public interface MainContracts {
+public interface RegistrarClienteContracts {
 
     interface View{
         void mostrarMensaje(String mensaje);

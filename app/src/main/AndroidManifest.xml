@@ -37,7 +37,7 @@
             android:name=".ModuloGeografia.DireccionDeEntregaActivity"
             android:label="@string/textoDireccionDeEntrega"></activity>
 
-        <activity android:name=".Modelos.RegistroUsuarios.MainRegistrarCliente"
+        <activity android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
             android:label="RegistrarCliente">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

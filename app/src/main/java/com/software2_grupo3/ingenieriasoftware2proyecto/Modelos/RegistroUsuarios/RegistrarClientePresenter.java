@@ -2,14 +2,14 @@ package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.RegistroUsuario
 
 import android.content.Context;
 
-public class MainPresenter implements MainContracts.Presentador{
+public class RegistrarClientePresenter implements RegistrarClienteContracts.Presentador{
 
-    MainContracts.View mainView;
-    MainContracts.Interactor mainInteractor;
+    RegistrarClienteContracts.View mainView;
+    RegistrarClienteContracts.Interactor mainInteractor;
 
-    public MainPresenter(MainContracts.View mainView, Context context){
+    public RegistrarClientePresenter(RegistrarClienteContracts.View mainView, Context context){
         this.mainView = mainView;
-        mainInteractor = new MainInteractor(this, context);
+        mainInteractor = new RegistrarClienteInteractorActivity(this, context);
 
     }
 

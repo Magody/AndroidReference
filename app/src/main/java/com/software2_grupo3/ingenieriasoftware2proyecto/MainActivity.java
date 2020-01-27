@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         inicioFragment = new InicioFragment();
         pedidoFragment = new PedidoFragment();
         cuentaFragment = new CuentaFragment();
-        //registrarCliFragment = new MainRegistrarCliente();
+        //registrarCliFragment = new RegistrarClienteActivity();
 
     }
 
