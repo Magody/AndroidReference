@@ -51,6 +51,7 @@
     <string name="cedula">Cedula:</string>
     <string name="fecha_de_nacimiento">Fecha De Nacimiento:</string>
     <string name="telefono">Telefono:</string>
+    <string name="textoDebug" />
 
 
 </resources>

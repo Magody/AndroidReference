@@ -23,4 +23,6 @@ public class Parametros {
     public static final String DIRECTORIO_RAM_BOOLEAN_VOLVER_DE_MAPA = "dirRamBolberMapa";
 
 
+
+
 }
