@@ -18,11 +18,15 @@ public interface SeguimientoContracts {
         void botonHaLlegado(String codigo);
         void generarExitoso(String codigo);
         void generarFallido(String error);
+
+        //void enInicioActivity(String codigo);
     }
 
     interface Interactor{
         void generarCodigo();
         void cambiarEstado(String codigo, int estado);
+
+
     }
 
 
