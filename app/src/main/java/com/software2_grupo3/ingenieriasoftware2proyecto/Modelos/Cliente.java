@@ -8,25 +8,25 @@ import java.util.Date;
 public class Cliente {
 
     @Expose
-    @SerializedName("usuario") private String usuario;
+    @SerializedName("usuario") public String usuario;
     @Expose
-    @SerializedName("correo") private String correo;
+    @SerializedName("correo") public String correo;
     @Expose
     @SerializedName("latitud_preferida") private double latitud_preferida;
     @Expose
     @SerializedName("longitud_preferida") private double longitud_preferida;
     @Expose
-    @SerializedName("cedula") private String cedula;
+    @SerializedName("cedula") public String cedula;
     @Expose
-    @SerializedName("nombre") private String nombre;
+    @SerializedName("nombre") public String nombre;
     @Expose
-    @SerializedName("direccion") private String direccion;
+    @SerializedName("direccion") public String direccion;
     @Expose
-    @SerializedName("telefono") private String telefono;
+    @SerializedName("telefono") public String telefono;
     @Expose
-    @SerializedName("tarjeta") private String tarjeta;
+    @SerializedName("tarjeta") public String tarjeta;
     @Expose
-    @SerializedName("fechaNacimiento") private Date fechaNacimiento;
+    @SerializedName("fechaNacimiento") public Date fechaNacimiento;
 
 
 

@@ -1,7 +1,5 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD;
 
-import android.text.Editable;
-
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Cliente;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Respuesta;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloAdministracion.Parametros;
@@ -24,14 +22,14 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("registrarCli.php")
-    Call<Cliente> crearCliente(@Field("usuario") Editable usuario,
-                               @Field("correo") Editable correo,
-                               @Field("cedula") Editable cedula,
-                               @Field("nombre") Editable nombre,
-                               @Field("direccion") Editable direccion,
-                               @Field("telefono") Editable telefono,
-                               @Field("tarjeta") Editable tarjeta,
-                               @Field("fechaNacimiento") Editable fechaNacimiento);
+    Call<Cliente> crearCliente(@Field("usuario") String usuario,
+                               @Field("correo") String correo,
+                               @Field("cedula") String cedula,
+                               @Field("nombre") String nombre,
+                               @Field("direccion") String direccion,
+                               @Field("telefono") String telefono,
+                               @Field("tarjeta") String tarjeta,
+                               @Field("fechaNacimiento") String fechaNacimiento);
 
 
 

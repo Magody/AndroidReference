@@ -16,7 +16,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.RegistroUsuarios.MainRegistrarCliente;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Utilidad;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloCuenta.CuentaFragment;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloGeografia.DireccionDeEntregaActivity;
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         inicioFragment = new InicioFragment();
         pedidoFragment = new PedidoFragment();
         cuentaFragment = new CuentaFragment();
-        registrarCliFragment = new MainRegistrarCliente();
+        //registrarCliFragment = new MainRegistrarCliente();
 
     }
 

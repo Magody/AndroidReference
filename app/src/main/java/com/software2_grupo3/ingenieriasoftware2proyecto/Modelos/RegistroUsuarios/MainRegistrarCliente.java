@@ -1,6 +1,7 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.RegistroUsuarios;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,6 +33,14 @@ public class MainRegistrarCliente extends AppCompatActivity implements MainContr
         btnRegistrar = findViewById(R.id.btnregistrar);
 
         mainPresenter = new MainPresenter(this, this);
+
+        btnRegistrar.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                    mainPresenter.enBotonPresionado();
+            }
+        });
 
     }
 
