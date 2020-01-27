@@ -8,11 +8,18 @@
         android:layout_width="match_parent"
         android:layout_height="386dp" />
 
+    <ProgressBar
+        android:id="@+id/progressBarCarrito"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
     <Button
         android:id="@+id/buttonGenPedido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="abrirSeguimiento"
         android:text="@string/stringGenerarPedido" />
 
     <Button

@@ -4,12 +4,14 @@ public interface SeguimientoContracts {
 
     interface View{
         void mostrarMensaje(String mensaje); //codigo generado
+        void mostrarProgressBar();
+        void ocultarProgressBar();
     }
 
     interface Presentador{
         void botonGenerarCodigo();
-        void generarExitoso();
-        void generarFallido();
+        void generarExitoso(String codigo);
+        void generarFallido(String error);
     }
 
     interface Interactor{
