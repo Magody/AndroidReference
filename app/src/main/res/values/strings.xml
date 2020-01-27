@@ -26,6 +26,7 @@
     <string name="stringEnCamino">En Camino</string>
     <string name="stringHaLlegado">Ha Llegado</string>
     <string name="stringCambiarEstado">Cambiar Estado</string>
+    <string name="stringDebug">Debugo</string>
 
 
 
@@ -39,6 +40,7 @@
     <string name="textoUbicacionActual">Ubicación actual</string>
     <string name="stringIndicarNumero">Su número de pedido es:</string>
 
+    <string name="textoFuncionDebug">Función de prueba</string>
 
     <!--Mensajes-->
     <string name="msgDebeAceptarElPermisoDeUbicacion">Debe aceptar los permisos para continuar</string>

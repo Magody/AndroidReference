@@ -33,4 +33,25 @@ public class SeguimientoActivity extends Activity implements SeguimientoContract
     public void ocultarProgressBar() {
 
     }
+
+    @Override
+    public void mostrarEstado(int estado) {
+        if(estado == 1){
+            findViewById(R.id.buttonSeguimientoAtendido).setBackgroundColor(getColor(R.color.colorVerde));
+            findViewById(R.id.buttonSeguimientoEnCamino).setBackgroundColor(getColor(R.color.colorNegro));
+            findViewById(R.id.buttonSeguimientoHaLlegado).setBackgroundColor(getColor(R.color.colorNegro));
+        }else if(estado == 2){
+            findViewById(R.id.buttonSeguimientoAtendido).setBackgroundColor(getColor(R.color.colorVerde));
+            findViewById(R.id.buttonSeguimientoEnCamino).setBackgroundColor(getColor(R.color.colorVerde));
+            findViewById(R.id.buttonSeguimientoHaLlegado).setBackgroundColor(getColor(R.color.colorNegro));
+        }else if(estado == 3){
+            findViewById(R.id.buttonSeguimientoAtendido).setBackgroundColor(getColor(R.color.colorVerde));
+            findViewById(R.id.buttonSeguimientoEnCamino).setBackgroundColor(getColor(R.color.colorVerde));
+            findViewById(R.id.buttonSeguimientoHaLlegado).setBackgroundColor(getColor(R.color.colorVerde));
+        }else{
+            findViewById(R.id.buttonSeguimientoAtendido).setBackgroundColor(getColor(R.color.colorNegro));
+            findViewById(R.id.buttonSeguimientoEnCamino).setBackgroundColor(getColor(R.color.colorNegro));
+            findViewById(R.id.buttonSeguimientoHaLlegado).setBackgroundColor(getColor(R.color.colorNegro));
+        }
+    }
 }

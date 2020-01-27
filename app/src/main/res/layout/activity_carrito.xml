@@ -23,6 +23,12 @@
         android:text="@string/stringGenerarPedido" />
 
     <Button
+        android:id="@+id/buttonVerPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stringPedido" />
+
+    <Button
         android:id="@+id/buttonCambiarEstado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

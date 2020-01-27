@@ -26,6 +26,11 @@
         app:showAsAction="never"
         />
 
+    <item
+        android:id="@+id/itemMenuClienteReiniciarSeguimiento"
+        android:title="@string/textoFuncionDebug"
+        app:showAsAction="never"
+        />
 
 
 </menu>

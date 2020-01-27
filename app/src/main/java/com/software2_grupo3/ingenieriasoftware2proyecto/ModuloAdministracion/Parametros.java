@@ -4,7 +4,7 @@ public class Parametros {
 
     //Conexiones
 
-    public static final String URL_BASE = "https://www.deusgallet.com/";
+    public static final String URL_BASE = "http://deusgallet.com/";
 
     public static final int CODIGO_MENSAJE_ERROR_SERVIDOR = 0;
     public static final int CODIGO_MENSAJE_CORRECTO = 1;
@@ -22,6 +22,5 @@ public class Parametros {
     public static final String DIRECTORIO_RAM_DOUBLE_LATITUD = "dirRamLatitud";
     public static final String DIRECTORIO_RAM_DOUBLE_LONGITUD = "dirRamLongitud";
     public static final String DIRECTORIO_RAM_BOOLEAN_VOLVER_DE_MAPA = "dirRamBolberMapa";
-
-
+    public static final String DIRECTORIO_CODIGO = "dirCodigo";
 }
