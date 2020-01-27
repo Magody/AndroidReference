@@ -1,6 +1,7 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Producto;
+import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloHome.DetalleProductoActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 import com.squareup.picasso.Picasso;
 
@@ -58,13 +60,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                Log.d(TAG, "TIENDA: "+mData.get(position).getCorreo());
-//
-//                Intent intent = new Intent(mContext, ProductosFiltroActivity.class);
-//                intent.putExtra(Parametros.DIRECTORIO_RAM_EMPRESA_CORREO, mData.get(position).getCorreo());
-//                mContext.startActivity(intent); //solo con lo de la empresa
-
+                Intent intent = new Intent(mContext, DetalleProductoActivity.class);
+                intent.putExtra("url", producto.getUrl());
+               mContext.startActivity(intent);
 
             }
         });

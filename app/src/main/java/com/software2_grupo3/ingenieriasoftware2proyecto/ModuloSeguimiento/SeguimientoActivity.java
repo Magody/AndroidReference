@@ -2,6 +2,7 @@ package com.software2_grupo3.ingenieriasoftware2proyecto.ModuloSeguimiento;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
@@ -54,4 +55,10 @@ public class SeguimientoActivity extends Activity implements SeguimientoContract
             findViewById(R.id.buttonSeguimientoHaLlegado).setBackgroundColor(getColor(R.color.colorNegro));
         }
     }
+
+
+    public void volver(View view){
+        onBackPressed();
+    }
+
 }

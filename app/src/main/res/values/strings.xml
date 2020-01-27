@@ -29,7 +29,6 @@
     <string name="stringDebug">Debugo</string>
 
 
-
     <!--Texto-->
     <string name="textoCarritoDeCompras">Carrito de compras</string>
     <string name="textoDireccionDeEntrega">Dirección de entrega</string>
@@ -50,7 +49,6 @@
 
     <!--Errores-->
     <string name="errorNoSePudoLeerLaPosicion">Hubo un error al leer la posición, reinicie la aplicación y asegúrese de activar el GPS.</string>
-
 
 
 </resources>
