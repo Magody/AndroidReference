@@ -18,7 +18,9 @@ public class MainRegistrarCliente extends AppCompatActivity implements MainContr
     MainContracts.Presentador mainPresenter;
 
 
-   protected void onCreateView(Bundle savedInstanceState) {
+   protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_registrar);
 
         txtUser = findViewById(R.id.txtuser);
         txtPwd = findViewById(R.id.txtpwd);
@@ -38,9 +40,19 @@ public class MainRegistrarCliente extends AppCompatActivity implements MainContr
 
             @Override
             public void onClick(View v) {
-                    mainPresenter.enBotonPresionado();
+                    mainPresenter.enBotonPresionado(txtcedula.getText().toString(),
+                            txtCorreo.getText().toString(),
+                            txtdireccion.getText().toString(),
+                            txtfechanacimiento.getText().toString(),
+                            txtPwd.getText().toString(),
+                            txttarjeta.getText().toString(),
+                            txttelefono.getText().toString(),
+                            txtUser.getText().toString(),
+                            txtNombre.getText().toString()
+                            );
             }
         });
+
 
     }
 

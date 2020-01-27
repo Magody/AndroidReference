@@ -20,7 +20,7 @@ public class MainInteractor extends MainRegistrarCliente implements MainContract
     Context context;
 
     MainContracts.Presentador callbackMainPresenter;
-    //MainRegistrarCliente mainRegistrarCliente = new MainRegistrarCliente();
+    MainRegistrarCliente mainRegistrarCliente = new MainRegistrarCliente();
 
     public MainInteractor(MainContracts.Presentador callbackMainPresenter, Context context){
         this.context = context;
@@ -29,13 +29,15 @@ public class MainInteractor extends MainRegistrarCliente implements MainContract
 
 
     @Override
-    public void insertarRegistro() {
+    public void insertarRegistro(String cedula, String correo, String direccion, String fechaNacimiento, String password, String tarjeta, String telefono, String usuario, String nombre) {
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
         Call<Cliente> call;
-        //call = apiInterface.crearCliente("Pepe", "pepe@dg.com", "185448562", "Pedro", "Ecuador", "099656547", "1545478854", 1999-08-08);
-        call = apiInterface.crearCliente(txtUser.getText().toString(), txtCorreo.getText().toString(), txtcedula.getText().toString(), txtNombre.getText().toString(), txtdireccion.getText().toString(), txttelefono.getText().toString(), txttarjeta.getText().toString(), txtfechanacimiento.getText().toString());
+        //call = apiInterface.crearCliente("JUAN", "pepe@dg.com", "185448562", "Pedro", "Ecuador", "099656547", "1545478854", "1999-08-08");
+        call = apiInterface.crearCliente(usuario, correo, cedula, nombre, direccion, telefono, tarjeta, fechaNacimiento, password);
+
+
 
         call.enqueue(new Callback<Cliente>() {
             @Override

@@ -29,7 +29,8 @@ public interface ApiInterface {
                                @Field("direccion") String direccion,
                                @Field("telefono") String telefono,
                                @Field("tarjeta") String tarjeta,
-                               @Field("fechaNacimiento") String fechaNacimiento);
+                               @Field("fechaNacimiento") String fechaNacimiento,
+                               @Field("password") String password);
 
 
 

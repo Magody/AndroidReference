@@ -14,9 +14,12 @@ public class MainPresenter implements MainContracts.Presentador{
     }
 
 
+
+
     @Override
-    public void enBotonPresionado() {
-        mainInteractor.insertarRegistro();
+    public void enBotonPresionado(String cedula, String correo, String direccion, String fechaNacimiento, String password, String tarjeta, String telefono, String usuario, String nombre) {
+        mainInteractor.insertarRegistro( cedula,  correo,  direccion,  fechaNacimiento,  password,  tarjeta,  telefono,  usuario,  nombre);
+
     }
 
     @Override

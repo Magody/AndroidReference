@@ -36,14 +36,16 @@
         <activity
             android:name=".ModuloGeografia.DireccionDeEntregaActivity"
             android:label="@string/textoDireccionDeEntrega"></activity>
-        <activity
-            android:name=".Modelos.RegistroUsuarios.MainRegistrarCliente"
+
+        <activity android:name=".Modelos.RegistroUsuarios.MainRegistrarCliente"
             android:label="RegistrarCliente">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter> </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
 
         <activity android:name=".MainActivity">
 
