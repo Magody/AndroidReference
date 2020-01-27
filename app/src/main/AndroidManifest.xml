@@ -34,6 +34,14 @@
 
         <activity
             android:name=".ModuloGeografia.DireccionDeEntregaActivity"
+            android:label="@string/textoDireccionDeEntrega"></activity>
+
+        <activity 
+            android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
+            android:label="RegistrarCliente">
+          
+          
+          
             android:label="@string/textoDireccionDeEntrega" />
         <activity
             android:name=".ModuloSeguimiento.CarritoActivity"
@@ -47,11 +55,19 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
+
+          
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+
+        <activity android:name=".MainActivity">
+
+
         </activity>
     </application>
 
