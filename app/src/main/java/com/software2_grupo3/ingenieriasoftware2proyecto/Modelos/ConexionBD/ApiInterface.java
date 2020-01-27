@@ -31,6 +31,13 @@ public interface ApiInterface {
                                @Field("tarjeta") String tarjeta,
                                @Field("fechaNacimiento") String fechaNacimiento,
                                @Field("password") String password);
+/*
+    @FormUrlEncoded
+    @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_REGISTROCLIENTE+"correo.php")
+    Call<Cliente> correo(@Field("usuario") String usuario,
+                         @Field("correo") String correo);
+
+ */
 
 
 

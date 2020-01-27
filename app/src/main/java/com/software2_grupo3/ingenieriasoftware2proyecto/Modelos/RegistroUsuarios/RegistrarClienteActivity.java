@@ -1,5 +1,6 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.RegistroUsuarios;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.software2_grupo3.ingenieriasoftware2proyecto.MainActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 
 public class RegistrarClienteActivity extends AppCompatActivity implements RegistrarClienteContracts.View {
@@ -61,6 +63,10 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void navegarMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
+    }
 
 
 }

@@ -25,6 +25,7 @@ public class RegistrarClientePresenter implements RegistrarClienteContracts.Pres
     @Override
     public void enInsertarExitoso(String data) {
         mainView.mostrarMensaje(data);
+        mainView.navegarMainActivity();
 
     }
 
