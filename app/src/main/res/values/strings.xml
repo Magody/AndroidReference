@@ -52,6 +52,10 @@
     <string name="fecha_de_nacimiento">Fecha De Nacimiento:</string>
     <string name="telefono">Telefono:</string>
     <string name="textoDebug" />
+    <string name="atras">Atras</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="codigo_de_verificacion">Codigo de Verificacion</string>
+    <string name="tarjeta">Tarjeta:</string>
 
 
 </resources>

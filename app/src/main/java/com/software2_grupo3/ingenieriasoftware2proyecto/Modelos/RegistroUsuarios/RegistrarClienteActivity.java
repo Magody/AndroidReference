@@ -50,8 +50,14 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
                             txttarjeta.getText().toString(),
                             txttelefono.getText().toString(),
                             txtUser.getText().toString(),
-                            txtNombre.getText().toString()
+                            txtNombre.getText().toString(),
+                            ""
                             );
+
+                    Intent pasarDatos =  new Intent(RegistrarClienteActivity.this, RegistrarClienteCodigoActivity.class);
+                    pasarDatos.putExtra("cedula", txtcedula.getText().toString());
+                    startActivity(pasarDatos);
+
             }
         });
 
