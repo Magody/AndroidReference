@@ -4,7 +4,7 @@ public class Parametros {
 
     //Conexiones
 
-    public static final String URL_BASE = "https://www.deusgallet.com/";
+    public static final String URL_BASE = "http://deusgallet.com/";
 
     public static final int CODIGO_MENSAJE_ERROR_SERVIDOR = 0;
     public static final int CODIGO_MENSAJE_CORRECTO = 1;
@@ -12,6 +12,8 @@ public class Parametros {
     public static final String DIRECTORIO_PROYECTO = " Ingenieria/Proyectos/IngSoftware2/HeySanta/";
     public static final String DIRECTORIO_MODULO_GEOGRAFIA = "ModuloGeografia/";
     public static final String DIRECTORIO_MODULO_REGISTROCLIENTE = "ModuloRegistroCliente/";
+  public static final String DIRECTORIO_MODULO_SEGUIMIENTO = "ModuloSeguimiento/";
+
     //Servicios
     public static final String CHANNEL1_ID = "CanalNotificacion1";
 
@@ -22,7 +24,6 @@ public class Parametros {
     public static final String DIRECTORIO_RAM_DOUBLE_LONGITUD = "dirRamLongitud";
     public static final String DIRECTORIO_RAM_BOOLEAN_VOLVER_DE_MAPA = "dirRamBolberMapa";
 
-
-
+    public static final String DIRECTORIO_CODIGO = "dirCodigo";
 
 }
