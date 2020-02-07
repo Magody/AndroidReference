@@ -26,7 +26,7 @@
     <string name="stringEnCamino">En Camino</string>
     <string name="stringHaLlegado">Ha Llegado</string>
     <string name="stringCambiarEstado">Cambiar Estado</string>
-
+    <string name="stringDebug">Debugo</string>
 
 
     <!--Texto-->
@@ -39,6 +39,7 @@
     <string name="textoUbicacionActual">Ubicación actual</string>
     <string name="stringIndicarNumero">Su número de pedido es:</string>
 
+    <string name="textoFuncionDebug">Función de prueba</string>
 
     <!--Mensajes-->
     <string name="msgDebeAceptarElPermisoDeUbicacion">Debe aceptar los permisos para continuar</string>
@@ -49,6 +50,19 @@
     <!--Errores-->
     <string name="errorNoSePudoLeerLaPosicion">Hubo un error al leer la posición, reinicie la aplicación y asegúrese de activar el GPS.</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="password">Password</string>
+    <string name="usuario">Usuario</string>
+    <string name="nombres">Nombres:</string>
+    <string name="correo">Correo:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="cedula">Cedula:</string>
+    <string name="fecha_de_nacimiento">Fecha De Nacimiento:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="textoDebug" />
 
 
 </resources>
