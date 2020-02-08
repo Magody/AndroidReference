@@ -5,6 +5,7 @@ import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Cliente;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Pedido;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Respuesta;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloAdministracion.Parametros;
+import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Entregador;
 
 import java.util.List;
 
@@ -44,7 +45,6 @@ public interface ApiInterface {
  */
 
 
-
     //MóduloSeguimiento
     @FormUrlEncoded
     @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_SEGUIMIENTO + "generarCodigo.php")
@@ -63,9 +63,19 @@ public interface ApiInterface {
                                @Field("estado") int pedidoEstado);
 
     @FormUrlEncoded
-    @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_SEGUIMIENTO+"consultarEstadoPedido.php")
+    @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_SEGUIMIENTO + "consultarEstadoPedido.php")
     Call<Pedido> consultarEstadoPedido(@Field("id") int id);
 
+    //Modulo Entregador
+    @FormUrlEncoded
+    @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_ENTREGADOR + "registrarEntregador.php")
+    Call<Entregador> registrarEntregador(@Field("nombre") String nombre,
+                                         @Field("correo") String correo,
+                                         @Field("cedula") String cedula,
+                                         @Field("telefono") String telefono,
+                                         @Field("fechaNacimiento") String fechanacimiento,
+                                         @Field("usuario") String usuario,
+                                         @Field("password") String password);
 
     /*
     @FormUrlEncoded
