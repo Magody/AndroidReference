@@ -38,11 +38,8 @@
 
         <activity 
             android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
-            android:label="RegistrarCliente">
-          
-          
-          
-            android:label="@string/textoDireccionDeEntrega" />
+            android:label="RegistrarCliente"></activity>
+
         <activity
             android:name=".ModuloSeguimiento.CarritoActivity"
             android:label="Carrito" />
@@ -65,10 +62,6 @@
 
         </activity>
 
-        <activity android:name=".MainActivity">
-
-
-        </activity>
     </application>
 
 </manifest>
