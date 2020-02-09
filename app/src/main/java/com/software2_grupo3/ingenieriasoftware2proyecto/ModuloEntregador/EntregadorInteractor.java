@@ -6,6 +6,7 @@ import android.util.Log;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiClient;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiInterface;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Entregador;
+import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Validacion;
 import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 
 import retrofit2.Call;
@@ -25,6 +26,13 @@ public class EntregadorInteractor implements EntregadorContracts.Interactor {
 
     @Override
     public void aceptarRegistro(String nombre, String cedula, String correo, String fechanacimiento, String telefono, String usuario, String pwd) {
+
+        String[]campos = new String[]{nombre, cedula, correo, fechanacimiento, telefono, usuario, pwd};
+        if(!Validacion.camposLlenos(campos)){
+            callbackEntregadorPresentador.enRegistroFallido(context.getString(R.string.msgExistenCamposVacios));
+            return;
+        }
+
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         Call<Entregador> call;
         call = apiInterface.registrarEntregador(nombre, correo, cedula, telefono, fechanacimiento, usuario, pwd);

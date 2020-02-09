@@ -19,7 +19,7 @@ public class ValidacionTest {
     }*/
 
     @Test
-    public void puntoDentroDeQuito(){
+    public void puntoDentroDeQuito() {
 
         double[][] puntosCorrectos = new double[][]{
                 {-0.09, -78.40},
@@ -38,6 +38,20 @@ public class ValidacionTest {
         for (double[] punto : puntosIncorrectos) {
             assertFalse(Validacion.puntoDentroDeQuito(punto[0], punto[1]));
         }
+    }
+
+    @Test
+    public void camposLlenos() {
+        String[] camposCorrectos = new String[]{"Ricardo López", "1001513322"};
+        String[] camposIncorrectos = new String[]{"Ricardo López", ""};
+        assertTrue(Validacion.camposLlenos(camposCorrectos));
+        assertFalse(Validacion.camposLlenos(camposIncorrectos));
+    }
+
+    @Test
+    public void correoValido(){
+        String correo = "juan@epn.ec";
+        assertTrue(Validacion.isValidEmail(correo));
     }
 
 }
