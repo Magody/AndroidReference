@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBarCambiarEstados"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="3"
+        android:text="@string/stringNumeroPedido" />
+
+    <Button
+        android:id="@+id/buttonAtendido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stringAtendido" />
+
+    <Button
+        android:id="@+id/buttonEnCamino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stringEnCamino" />
+
+    <Button
+        android:id="@+id/buttonHaLlegado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stringHaLlegado" />
+</LinearLayout>
