@@ -1,5 +1,6 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos;
 
+
 import android.text.TextUtils;
 
 public class Validacion {
@@ -36,10 +37,5 @@ public class Validacion {
         return (latitud <= puntoSuperiorIzquierda[0] && longitud >= puntoSuperiorIzquierda[1] &&
                 (latitud >= puntoInferiorDerecha[0] && longitud <= puntoInferiorDerecha[1]));
 
-    }
-
-    public static boolean isValidEmail(String email) {
-        System.out.printf(email);
-        return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

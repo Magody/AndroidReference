@@ -42,16 +42,9 @@ public class ValidacionTest {
 
     @Test
     public void camposLlenos() {
-        String[] camposCorrectos = new String[]{"Ricardo López", "1001513322"};
-        String[] camposIncorrectos = new String[]{"Ricardo López", ""};
+        String[] camposCorrectos = new String[]{"Hey Santa!", "1748754781"};
+        String[] camposIncorrectos = new String[]{"Hey Santa!", ""};
         assertTrue(Validacion.camposLlenos(camposCorrectos));
         assertFalse(Validacion.camposLlenos(camposIncorrectos));
     }
-
-    @Test
-    public void correoValido(){
-        String correo = "juan@epn.ec";
-        assertTrue(Validacion.isValidEmail(correo));
-    }
-
 }
