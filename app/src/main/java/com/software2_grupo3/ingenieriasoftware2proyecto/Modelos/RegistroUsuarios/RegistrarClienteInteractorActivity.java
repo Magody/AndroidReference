@@ -6,6 +6,7 @@ import android.util.Log;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Cliente;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiClient;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiInterface;
+import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Validacion;
 import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 
 import retrofit2.Call;
@@ -30,6 +31,11 @@ public class RegistrarClienteInteractorActivity extends RegistrarClienteActivity
 
     @Override
     public void insertarRegistro(String cedula, String correo, String direccion, String fechaNacimiento, String password, String tarjeta, String telefono, String usuario, String nombre, String codigoVerificacion) {
+        String[]campos = new String[]{nombre, cedula, correo, direccion, fechaNacimiento, password, tarjeta, telefono, usuario, nombre};
+        if(!Validacion.camposLlenos(campos)){
+            callbackMainPresenter.enInsertarFallido(context.getString(R.string.msgExistenCamposVacios));
+            return;
+        }
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 

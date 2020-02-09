@@ -45,6 +45,7 @@
     <string name="msgDebeAceptarElPermisoDeUbicacion">Debe aceptar los permisos para continuar</string>
     <string name="msgUbicacionActualizada">La ubicación de entrega ha sido actualizada</string>
     <string name="msgFueraDeLosLimitesDeQuito">La ubicación está fuera de los límites de Quito</string>
+    <string name="msgExistenCamposVacios">Existen campos vacíos por llenar</string>
 
 
     <!--Errores-->
