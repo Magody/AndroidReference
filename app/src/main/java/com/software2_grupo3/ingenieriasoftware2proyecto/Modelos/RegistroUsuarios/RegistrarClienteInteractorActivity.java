@@ -16,7 +16,7 @@ import retrofit2.Response;
 
 public class RegistrarClienteInteractorActivity extends RegistrarClienteActivity implements RegistrarClienteContracts.Interactor {
 
-    public static final String TAG = "RegistrarClienteInteractorActivity";
+    public static final String TAG = "RegistrarClienteInteractor";
 
     Context context;
 
@@ -38,9 +38,8 @@ public class RegistrarClienteInteractorActivity extends RegistrarClienteActivity
         }
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-
         Call<Cliente> call;
-        //call = apiInterface.crearCliente("JUAN", "pepe@dg.com", "185448562", "Pedro", "Ecuador", "099656547", "1545478854", "1999-08-08");
+        //call = apiInterface.crearCliente("JUANJO", "pepe@dg.com", "185448562", "Pedro", "Ecuador", "099656547", "1545478854", "1999-08-08", "intel", "0000");
         call = apiInterface.crearCliente(usuario, correo, cedula, nombre, direccion, telefono, tarjeta, fechaNacimiento, password, "0000");
 
 

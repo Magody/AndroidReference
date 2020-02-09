@@ -5,6 +5,7 @@ public interface RegistrarClienteContracts {
     interface View{
         void mostrarMensaje(String mensaje);
         void navegarMainActivity();
+        void navegarRegistrarClienteCodigoActivity();
     }
 
     interface Presentador{

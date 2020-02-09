@@ -15,19 +15,19 @@ public class RegistrarClienteCodigoPresenter implements RegistrarClienteCodigoCo
 
 
     @Override
-    public int botonAceptarCodigo(String codigoVerificacion, String cedula) {
-        int resultado = registrarClienteCodigoInteractor.aceptarCodigo(codigoVerificacion, cedula);
-        return resultado;
+    public void botonAceptarCodigo(String codigoVerificacion, String cedula) {
+        registrarClienteCodigoInteractor.aceptarCodigo(codigoVerificacion, cedula);
 
     }
 
     @Override
     public void aceptarExitoso(String mensaje) {
-
+        registrarClienteCodigoView.mostrarMensaje(mensaje);
+        registrarClienteCodigoView.navegarMainActivity();
     }
 
     @Override
     public void aceptarFallido(String error) {
-
+        registrarClienteCodigoView.mostrarMensaje(error);
     }
 }

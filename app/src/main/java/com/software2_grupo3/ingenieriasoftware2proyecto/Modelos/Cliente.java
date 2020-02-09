@@ -28,7 +28,7 @@ public class Cliente {
     @Expose
     @SerializedName("password") private String password;
     @Expose
-    @SerializedName("password") private String codigoVerificacion;
+    @SerializedName("codigoVerificacion") private String codigoVerificacion;
 
 
     public Cliente(String usuario, String correo) {
@@ -47,7 +47,6 @@ public class Cliente {
         this.fechaNacimiento = fechaNacimiento;
         this.password = password;
         this.codigoVerificacion = codigoVerificacion;
-
     }
 
     public String getUsuario() {

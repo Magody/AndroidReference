@@ -7,6 +7,7 @@ import android.util.Log;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Cliente;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiClient;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiInterface;
+import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Validacion;
 import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 
 import retrofit2.Call;
@@ -28,14 +29,18 @@ public class RegistrarClienteCodigoInteractor implements RegistrarClienteCodigoC
 
 
     @Override
-    public int aceptarCodigo(String codigoVerificacion, String cedula) {
+    public void aceptarCodigo(String codigoVerificacion, String cedula) {
+
+        String[]campos = new String[]{codigoVerificacion};
+        if(!Validacion.camposLlenos(campos)){
+            callbackRegistrarClienteCodigoPresentador.aceptarFallido(context.getString(R.string.msgExistenCamposVacios));
+            return;
+        }
+
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         final int[] resultado = new int[1]; //probar
-
         Call<Cliente> call;
         call = apiInterface.crearCodigoCliente(codigoVerificacion, cedula);
-
-
         call.enqueue(new Callback<Cliente>() {
             @Override
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
@@ -44,19 +49,12 @@ public class RegistrarClienteCodigoInteractor implements RegistrarClienteCodigoC
                     final Cliente cliente = response.body();
 
                     callbackRegistrarClienteCodigoPresentador.aceptarExitoso("Correo Verificado");
-                    resultado[0] = 1;//probar
-
 
                 } else {
                     callbackRegistrarClienteCodigoPresentador.aceptarFallido(context.getString(R.string.textoDebug));
-                    resultado[0] = 0; //probar
                 }
-
             }
 
-
-
-            @SuppressLint("LongLogTag")
             @Override
             public void onFailure(Call<Cliente> call, Throwable t) {
                 callbackRegistrarClienteCodigoPresentador.aceptarFallido(t.toString());
@@ -64,6 +62,5 @@ public class RegistrarClienteCodigoInteractor implements RegistrarClienteCodigoC
             }
         });
 
-        return resultado[0];
     }
 }

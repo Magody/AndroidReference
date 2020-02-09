@@ -19,14 +19,14 @@ public class RegistrarClientePresenter implements RegistrarClienteContracts.Pres
     @Override
     public void enBotonPresionado(String cedula, String correo, String direccion, String fechaNacimiento, String password, String tarjeta, String telefono, String usuario, String nombre, String codigoVerificacion) {
         mainInteractor.insertarRegistro( cedula,  correo,  direccion,  fechaNacimiento,  password,  tarjeta,  telefono,  usuario,  nombre, codigoVerificacion);
-
+        System.out.println("presentador ");
     }
 
     @Override
     public void enInsertarExitoso(String data) {
         mainView.mostrarMensaje(data);
-        mainView.navegarMainActivity();
-
+        mainView.navegarRegistrarClienteCodigoActivity();
+        //mainView.navegarMainActivity();
     }
 
     @Override

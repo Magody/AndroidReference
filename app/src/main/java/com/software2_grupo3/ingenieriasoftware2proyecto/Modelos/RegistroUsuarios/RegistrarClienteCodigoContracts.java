@@ -3,18 +3,19 @@ package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.RegistroUsuario
 public interface RegistrarClienteCodigoContracts {
 
     interface View{
-        void mostrarMensaje();
+        void mostrarMensaje(String mensaje);
+        void navegarMainActivity();
     }
 
     interface Presentador{
-        int botonAceptarCodigo(String codigoVerificacion, String cedula);
+        void botonAceptarCodigo(String codigoVerificacion, String cedula);
         void aceptarExitoso(String mensaje);
         void aceptarFallido(String error);
 
     }
 
     interface Interactor{
-        int aceptarCodigo(String codigoVerificacion, String cedula);
+        void aceptarCodigo(String codigoVerificacion, String cedula);
 
 
     }
