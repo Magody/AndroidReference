@@ -34,7 +34,12 @@ public interface ApiInterface {
                                @Field("telefono") String telefono,
                                @Field("tarjeta") String tarjeta,
                                @Field("fechaNacimiento") String fechaNacimiento,
-                               @Field("password") String password);
+                               @Field("password") String password,
+                               @Field("codigoVerificacion") String codigoVerificacion);
+    @FormUrlEncoded
+    @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_REGISTROCLIENTE +"codigoDeVerificacionCliente.php")
+    Call<Cliente> crearCodigoCliente(@Field("codigoVerificacion") String codigoVerificacion,
+                                     @Field("cedula") String cedula);
 /*
     @FormUrlEncoded
     @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_REGISTROCLIENTE+"correo.php")

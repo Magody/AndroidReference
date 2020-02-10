@@ -45,6 +45,7 @@
     <string name="msgDebeAceptarElPermisoDeUbicacion">Debe aceptar los permisos para continuar</string>
     <string name="msgUbicacionActualizada">La ubicación de entrega ha sido actualizada</string>
     <string name="msgFueraDeLosLimitesDeQuito">La ubicación está fuera de los límites de Quito</string>
+    <string name="msgExistenCamposVacios">Existen campos vacíos por llenar</string>
 
 
     <!--Errores-->
@@ -63,6 +64,10 @@
     <string name="fecha_de_nacimiento">Fecha De Nacimiento:</string>
     <string name="telefono">Telefono:</string>
     <string name="textoDebug" />
+    <string name="atras">Atras</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="codigo_de_verificacion">Codigo de Verificacion</string>
+    <string name="tarjeta">Tarjeta:</string>
 
 
 </resources>
