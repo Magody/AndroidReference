@@ -7,7 +7,7 @@
     <string name="fragmentoPedidos">FRAGMENTO DE PEDIDOS</string>
     <string name="fragmentoCuenta">FRAGMENTO DE CUENTA</string>
 
-    <string name="debugMsg">El vago del programador no puso un mensaje que mostrar</string>
+    <string name="debugMsg">Interacción</string>
 
 
     <!--Palabras simples-->
@@ -18,6 +18,15 @@
     <string name="stringVolver">Volver</string>
     <string name="stringConfirmar">Confirmar</string>
     <string name="stringAceptar">Aceptar</string>
+    <string name="stringGenerarPedido">Generar Pedido</string>
+    <string name="stringAtras">ATRAS</string>
+    <string name="stringNumeroPedido">AAA</string>
+    <string name="stringEstado">Estado:</string>
+    <string name="stringAtendido">Atendido</string>
+    <string name="stringEnCamino">En Camino</string>
+    <string name="stringHaLlegado">Ha Llegado</string>
+    <string name="stringCambiarEstado">Cambiar Estado</string>
+    <string name="stringDebug">Debugo</string>
 
 
     <!--Texto-->
@@ -28,16 +37,37 @@
     Cuando finalice presione el botón de Confirmar</string>
     <string name="textoTituloPermisoDeUbicacion">Permisos de ubicacion</string>
     <string name="textoUbicacionActual">Ubicación actual</string>
+    <string name="stringIndicarNumero">Su número de pedido es:</string>
 
+    <string name="textoFuncionDebug">Función de prueba</string>
 
     <!--Mensajes-->
     <string name="msgDebeAceptarElPermisoDeUbicacion">Debe aceptar los permisos para continuar</string>
     <string name="msgUbicacionActualizada">La ubicación de entrega ha sido actualizada</string>
     <string name="msgFueraDeLosLimitesDeQuito">La ubicación está fuera de los límites de Quito</string>
+    <string name="msgExistenCamposVacios">Existen campos vacíos por llenar</string>
 
 
     <!--Errores-->
     <string name="errorNoSePudoLeerLaPosicion">Hubo un error al leer la posición, reinicie la aplicación y asegúrese de activar el GPS.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="password">Password</string>
+    <string name="usuario">Usuario</string>
+    <string name="nombres">Nombres:</string>
+    <string name="correo">Correo:</string>
+    <string name="direccion">Direccion:</string>
+    <string name="cedula">Cedula:</string>
+    <string name="fecha_de_nacimiento">Fecha De Nacimiento:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="textoDebug" />
+    <string name="atras">Atras</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="codigo_de_verificacion">Codigo de Verificacion</string>
+    <string name="tarjeta">Tarjeta:</string>
 
 
 </resources>

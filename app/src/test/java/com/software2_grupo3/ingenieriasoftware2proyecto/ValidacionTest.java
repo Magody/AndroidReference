@@ -13,13 +13,9 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ValidacionTest {
-    /*@Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
-    }*/
 
     @Test
-    public void puntoDentroDeQuito(){
+    public void puntoDentroDeQuito() {
 
         double[][] puntosCorrectos = new double[][]{
                 {-0.09, -78.40},
@@ -40,4 +36,11 @@ public class ValidacionTest {
         }
     }
 
+    @Test
+    public void camposLlenos() {
+        String[] camposCorrectos = new String[]{"Hey Santa!", "1748754781"};
+        String[] camposIncorrectos = new String[]{"Hey Santa!", ""};
+        assertTrue(Validacion.camposLlenos(camposCorrectos));
+        assertFalse(Validacion.camposLlenos(camposIncorrectos));
+    }
 }

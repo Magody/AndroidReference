@@ -1,5 +1,8 @@
 package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos;
 
+
+import android.text.TextUtils;
+
 public class Validacion {
 
     public static boolean camposLlenos(String[] campos){
