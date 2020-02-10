@@ -86,6 +86,17 @@ public interface ApiInterface {
                                          @Field("password") String password);
 
 
+
+    @FormUrlEncoded
+    @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_ESTABLECIMIENTO + "registrarEstablecimiento.php")
+    Call<Respuesta> registrarEstablecimiento(@Field("RUC") String RUC,
+                                         @Field("nombre") String nombre,
+                                         @Field("password") String password,
+                                         @Field("direccion") String direccion,
+                                         @Field("telefonoFijo") String telefonoFijo,
+                                         @Field("cuentaBancaria") String cuentaBancaria,
+                                         @Field("correo") String correo);
+
     /*
     @FormUrlEncoded
     @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_TEST+"crearPersona.php")

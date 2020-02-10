@@ -35,7 +35,7 @@ public class ActualizarInteractor extends ActualizarUsuarioActivity implements A
 
         Call<Cliente> call;
         //call = apiInterface.crearCliente("JUAN", "pepe@dg.com", "185448562", "Pedro", "Ecuador", "099656547", "1545478854", "1999-08-08");
-        call = apiInterface.crearCliente(usuario, correo, cedula, nombre, direccion, telefono, tarjeta, fechaNacimiento, password);
+        call = apiInterface.crearCliente(usuario, correo, cedula, nombre, direccion, telefono, tarjeta, fechaNacimiento, password, "");
 
         call.enqueue(new Callback<Cliente>() {
             @Override

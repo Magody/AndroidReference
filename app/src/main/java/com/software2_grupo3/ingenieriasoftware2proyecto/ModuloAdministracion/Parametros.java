@@ -15,6 +15,7 @@ public class Parametros {
 
     public static final String DIRECTORIO_MODULO_SEGUIMIENTO = "ModuloSeguimiento/";
     public static final String DIRECTORIO_MODULO_ENTREGADOR = "ModuloEntregador/";
+    public static final String DIRECTORIO_MODULO_ESTABLECIMIENTO = "ModuloEstablecimiento/";
 
 
     //Servicios

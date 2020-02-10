@@ -70,4 +70,17 @@ tools:context=".InicioActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/buttonInicioRegistrarse2"
+        style="@style/fondoEstiloAzulInternoBlancoExterno"
+        android:layout_width="334dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="32dp"
+        android:alpha="1"
+        android:text="Registrar Establecimiento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,9 @@ package com.software2_grupo3.ingenieriasoftware2proyecto.Modelos;
 
 import android.text.TextUtils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Validacion {
 
     public static boolean camposLlenos(String[] campos){
@@ -38,4 +41,15 @@ public class Validacion {
                 (latitud >= puntoInferiorDerecha[0] && longitud <= puntoInferiorDerecha[1]));
 
     }
+
+    public static boolean esCorreoValido(String correo){
+        final String EMAIL_REGEX = "^[\\w-+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+        Pattern pattern = Pattern.compile(EMAIL_REGEX, Pattern.CASE_INSENSITIVE);;
+        Matcher matcher = pattern.matcher(correo);;
+        return matcher.matches();
+    }
+
+
+
+
 }

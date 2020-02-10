@@ -43,4 +43,20 @@ public class ValidacionTest {
         assertTrue(Validacion.camposLlenos(camposCorrectos));
         assertFalse(Validacion.camposLlenos(camposIncorrectos));
     }
+
+    @Test
+    public void esCorreoValido(){
+        String[] camposCorrectos = new String[]{"meliodasfistery@gmail.com", "danny.diaz@epn.edu.ec", "dennis_deny@hotmail.com"};
+        String[] camposIncorrectos = new String[]{"Hey Santa!", "correo@mail", "--343@.dr"};
+
+        for (String correo : camposCorrectos) {
+            assertTrue(Validacion.esCorreoValido(correo));
+        }
+
+        for (String correo : camposIncorrectos) {
+            assertFalse(Validacion.esCorreoValido(correo));
+        }
+
+    }
+
 }

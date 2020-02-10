@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.actualizarUsuario.ActualizarUsuarioActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloAdministracion.Parametros;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloCuenta.CuentaFragment;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloGeografia.DireccionDeEntregaActivity;
@@ -96,6 +97,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.itemNavCuenta:
                         cambiarFragmento(cuentaFragment);
                         return true;
+
+                    case R.id.itemMenuClienteActualizar:
+                        startActivity(new Intent(MainActivity.this, ActualizarUsuarioActivity.class));
+                        return true;
+
+
                     default:
                         return false;
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.RegistroUsuarios.RegistrarClienteActivity;
+import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloEstablecimiento.RegistrarEstablecimientoActivity;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -26,6 +27,13 @@ public class InicioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(InicioActivity.this, MainActivity.class));
+            }
+        });
+
+        findViewById(R.id.buttonInicioRegistrarse2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(InicioActivity.this, RegistrarEstablecimientoActivity.class));
             }
         });
 

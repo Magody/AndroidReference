@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_margin="30dp"
+android:orientation="vertical"
+tools:context=".ModuloEstablecimiento.RegistrarEstablecimientoActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro empresas"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="25dp" />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textViewRUC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUC"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextRUC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="1720254224001"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        tools:targetApi="o" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        tools:targetApi="o" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="****"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        tools:targetApi="o" />
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewDirecciónCompleta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección Completa"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextDirecciónCompleta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        tools:targetApi="o" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textViewTelefonoFijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teléfono fijo"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editTextTelefonoFijo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            tools:targetApi="o" />
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número de cuenta bancariaa"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCuenta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="0000 0000 0000 0000"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        tools:targetApi="o" />
+
+
+    <TextView
+        android:id="@+id/textViewCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/correo"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="example@mail.com"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        tools:targetApi="o" />
+
+    <Button
+    android:id="@+id/buttonRegistrarEmpresa"
+    style="@style/fondoEstiloDoradoInternoAzulExterno"
+    android:layout_width="143dp"
+    android:layout_height="62dp"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:text="@string/registrarse" />
+
+</LinearLayout>

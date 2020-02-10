@@ -32,5 +32,11 @@
         app:showAsAction="never"
         />
 
+    <item
+        android:id="@+id/itemMenuClienteActualizar"
+        android:title="Actualizar información"
+        app:showAsAction="never"
+        />
+
 
 </menu>
