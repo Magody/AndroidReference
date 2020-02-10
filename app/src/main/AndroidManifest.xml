@@ -35,41 +35,39 @@
 
         <activity
             android:name=".ModuloGeografia.DireccionDeEntregaActivity"
-            android:label="@string/textoDireccionDeEntrega"></activity>
 
-        <activity
-
-            android:name=".MainActivity"
+            android:label="@string/textoDireccionDeEntrega"/>
+        <activity 
+            android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
             android:label="RegistrarCliente"/>
 
+        <activity
+
+            android:name=".MainActivity"/>
 
 
-
+  
         <activity
             android:name=".ModuloSeguimiento.CarritoActivity"
-            android:label="Carrito" />
+            android:label="Carrito"/>
         <activity
             android:name=".ModuloSeguimiento.SeguimientoActivity"
-            android:label="Seguimiento" />
+            android:label="Seguimiento"/>
         <activity
             android:name=".ModuloSeguimiento.CambiarEstadosActivity"
-            android:label="CambiarEstados" />
+            android:label="CambiarEstados"/>
         <activity
             android:name=".Modelos.RegistroUsuarios.RegistrarClienteCodigoActivity"
             android:label="RegistrarClienteCodigo"/>
+       
         <activity
-            android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
+            android:name=".ModuloEntregador.EntregadorActivity"
             android:screenOrientation="portrait">
-
-          
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
     </application>
-
 </manifest>
