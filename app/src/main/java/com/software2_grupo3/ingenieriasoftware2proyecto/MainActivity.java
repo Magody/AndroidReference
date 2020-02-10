@@ -20,6 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.actualizarUsuario.ActualizarUsuarioActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloAdministracion.Parametros;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloCuenta.CuentaFragment;
+import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloEntregador.EntregadorActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloGeografia.DireccionDeEntregaActivity;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloHome.InicioFragment;
 import com.software2_grupo3.ingenieriasoftware2proyecto.ModuloPedido.PedidoFragment;
@@ -148,6 +149,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.itemMenuClienteSalir:
                 cerrarAplicacion();
                 return true;
+
+            case R.id.itemMenuClienteActualizar:
+                startActivity(new Intent(this, ActualizarUsuarioActivity.class));
+                return true;
+
+            case R.id.itemMenuEntregadorRegistrar:
+                startActivity(new Intent(this, EntregadorActivity.class));
+                return true;
+
             case R.id.itemMenuClienteReiniciarSeguimiento:
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = sharedPreferences.edit();

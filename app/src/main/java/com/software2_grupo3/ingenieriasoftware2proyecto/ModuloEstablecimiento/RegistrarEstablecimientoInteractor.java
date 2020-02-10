@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiClient;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiInterface;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Respuesta;
+import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Validacion;
+import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,6 +34,50 @@ public class RegistrarEstablecimientoInteractor implements RegistrarEstablecimie
 
     @Override
     public void insertarRegistroEstablecimiento(String RUC, String nombre, String password, String direccion, String telefonoFijo, String cuentaBancaria, String correo) {
+
+        String[]campos = new String[]{RUC, nombre, password, direccion, telefonoFijo, cuentaBancaria, correo};
+        if(!Validacion.camposLlenos(campos)){
+            classCallbackPresenter.enInsertarFallido(mContext.getString(R.string.msgExistenCamposVacios));
+            return;
+        }
+
+        if(!Validacion.esRUCValido(RUC)){
+            classCallbackPresenter.enInsertarFallido("RUC inválida");
+            return;
+        }
+
+        if(!Validacion.esCorreoValido(correo)){
+            classCallbackPresenter.enInsertarFallido("Correo inválido");
+            return;
+        }
+
+        if(!Validacion.estaLongitudStringEnRango(direccion, 3, 50)){
+            classCallbackPresenter.enInsertarFallido("La dirección no debe ser mayor a 50 caracteres ni menor a 3");
+            return;
+        }
+
+        if(!Validacion.estaLongitudStringEnRango(password, 3, 16)){
+            classCallbackPresenter.enInsertarFallido("La contraseña no debe ser mayor a 16 caracteres ni menor a 3");
+            return;
+        }
+
+        if(!Validacion.esTelefonoConvencionalValido(telefonoFijo)){
+            classCallbackPresenter.enInsertarFallido("El teléfono no parece ser válido");
+            return;
+        }
+
+        if(!Validacion.estaLongitudStringEnRango(nombre, 3, 50)){
+            classCallbackPresenter.enInsertarFallido("El Nombre no debe ser mayor a 50 caracteres ni menor a 2");
+            return;
+        }
+
+
+        if(!Validacion.esTarjetaValida(cuentaBancaria)){
+            classCallbackPresenter.enInsertarFallido("La tarjeta es inválida");
+            return;
+        }
+
+
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         Call<Respuesta> call = apiInterface.registrarEstablecimiento(RUC, nombre, password, direccion, telefonoFijo, cuentaBancaria, correo);

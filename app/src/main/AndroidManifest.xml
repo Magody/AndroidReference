@@ -20,7 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ModuloEstablecimiento.RegistrarEstablecimientoActivity"></activity>
+        <activity android:name=".ModuloEstablecimiento.VerificacionEstablecimientoActivity"></activity>
+        <activity android:name=".ModuloEstablecimiento.RegistrarEstablecimientoActivity" />
         <activity android:name=".InicioActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +48,9 @@
         <activity
             android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
             android:label="RegistrarCliente" />
+        <activity
+            android:name=".Modelos.actualizarUsuario.ActualizarUsuarioActivity"
+            android:label="ActualizarCliente" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".ModuloSeguimiento.CarritoActivity"
@@ -62,7 +66,7 @@
             android:label="RegistrarClienteCodigo" />
         <activity
             android:name=".ModuloEntregador.EntregadorActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

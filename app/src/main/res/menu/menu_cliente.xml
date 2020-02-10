@@ -38,5 +38,10 @@
         app:showAsAction="never"
         />
 
+    <item
+        android:id="@+id/itemMenuEntregadorRegistrar"
+        android:title="Registrar Entregador"
+        app:showAsAction="never"
+        />
 
 </menu>

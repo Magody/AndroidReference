@@ -59,4 +59,50 @@ public class ValidacionTest {
 
     }
 
+    @Test
+    public void esFechaValida(){
+        String[] camposCorrectos = new String[]{"05/12/1997", "05/1/1992", "05/12/2018"};
+        String[] camposIncorrectos = new String[]{"Hey Santa!", "50/12/1997", "10-12-1997", "0/12/1997"};
+
+        for (String fecha : camposCorrectos) {
+            assertTrue(Validacion.esFechaDeNacimientoValida(fecha));
+        }
+
+        for (String fecha : camposIncorrectos) {
+            assertFalse(Validacion.esFechaDeNacimientoValida(fecha));
+        }
+
+    }
+
+    @Test
+    public void esTarjetaValida(){
+        String[] camposCorrectos = new String[]{"1234598672345679", "1234598632345679", "1234593672345679"};
+        String[] camposIncorrectos = new String[]{"Hey Santa!", "50/12/1997", "12345986723435679", "134598672345679"};
+
+        for (String tarjeta : camposCorrectos) {
+            assertTrue(Validacion.esTarjetaValida(tarjeta));
+        }
+
+        for (String tarjeta : camposIncorrectos) {
+            assertFalse(Validacion.esTarjetaValida(tarjeta));
+        }
+
+    }
+
+    @Test
+    public void esRUCValido(){
+        String[] camposCorrectos = new String[]{"1720254224001"};
+        String[] camposIncorrectos = new String[]{"Hey Santa!", "1710254224001", "172025422402"};
+
+        for (String ruc : camposCorrectos) {
+            assertTrue(Validacion.esRUCValido(ruc));
+        }
+
+        for (String ruv : camposIncorrectos) {
+            assertFalse(Validacion.esRUCValido(ruv));
+        }
+
+    }
+
+
 }
