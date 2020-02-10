@@ -35,12 +35,14 @@ public interface ApiInterface {
                                @Field("telefono") String telefono,
                                @Field("tarjeta") String tarjeta,
                                @Field("fechaNacimiento") String fechaNacimiento,
+
                                @Field("password") String password,
                                @Field("codigoVerificacion") String codigoVerificacion);
     @FormUrlEncoded
     @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_REGISTROCLIENTE +"codigoDeVerificacionCliente.php")
     Call<Respuesta> crearCodigoCliente(@Field("codigoVerificacion") String codigoVerificacion,
                                      @Field("cedula") String cedula);
+
 /*
     @FormUrlEncoded
     @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_REGISTROCLIENTE+"correo.php")
@@ -68,6 +70,7 @@ public interface ApiInterface {
                                @Field("estado") int pedidoEstado);
 
     @FormUrlEncoded
+
     @POST(Parametros.DIRECTORIO_PROYECTO + Parametros.DIRECTORIO_MODULO_SEGUIMIENTO + "consultarEstadoPedido.php")
     Call<Pedido> consultarEstadoPedido(@Field("id") int id);
 
@@ -81,6 +84,7 @@ public interface ApiInterface {
                                          @Field("fechaNacimiento") String fechanacimiento,
                                          @Field("usuario") String usuario,
                                          @Field("password") String password);
+
 
     /*
     @FormUrlEncoded

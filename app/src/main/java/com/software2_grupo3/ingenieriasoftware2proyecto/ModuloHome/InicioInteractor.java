@@ -29,6 +29,7 @@ public class InicioInteractor implements InicioContracts.Interactor {
         lista.add(new Producto(1, "Primero", "https://www.toystrains.com.mx/images/inicio/regalo.jpg", 10));
         lista.add(new Producto(2, "Segundo", "https://images-na.ssl-images-amazon.com/images/I/81J4TvhJx1L._SX425_.jpg", 20));
         lista.add(new Producto(3, "Tercero", "https://www.tiposde.com/wp-content/uploads/2010/01/tipos-de-productos-tangibles.jpg", 30));
+
         lista.add(new Producto(4, "Primero", "https://webcomicms.net/sites/default/files/clipart/129693/book-pictures-129693-9465160.jpg", 10));
         lista.add(new Producto(5, "Segundo", "https://image.shutterstock.com/image-vector/vector-basket-christmas-gifts-260nw-746365573.jpg", 25));
         lista.add(new Producto(6, "Tercero", "https://cdn.ticbeat.com/src/uploads/2019/10/vino.jpg", 35));
@@ -46,6 +47,7 @@ public class InicioInteractor implements InicioContracts.Interactor {
         lista.add(new Producto(10, "Primero", "https://res.cloudinary.com/demo/image/upload/shoes.jpg", 50));
         lista.add(new Producto(11, "Segundo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6915fgMNpkXuf44gL8NcHpekj7BZ7AknDzy8uj3z9M0bkxVS&s", 40));
         lista.add(new Producto(12, "Tercero", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR98FMq_v2_B96lsNT7nq66jXRQAQK1RZU6P6rVImSKAcwiQ5BE&s", 33));
+
         callbackObservarProductosPresenter.enConsultaProductoExitoso(adapter);
     }
 }

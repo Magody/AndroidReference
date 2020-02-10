@@ -20,7 +20,9 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
     RegistrarClienteContracts.Presentador mainPresenter;
 
 
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_registrar);
 
@@ -55,6 +57,7 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
                 );
 
 
+
             }
         });
 
@@ -77,6 +80,7 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
         pasarDatos.putExtra("cedula", txtcedula.getText().toString());
         startActivity(pasarDatos);
     }
+
 
 
 }
