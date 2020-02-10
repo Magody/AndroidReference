@@ -20,7 +20,7 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
     RegistrarClienteContracts.Presentador mainPresenter;
 
 
-   protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_registrar);
 
@@ -38,20 +38,23 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
 
         mainPresenter = new RegistrarClientePresenter(this, this);
 
-        btnRegistrar.setOnClickListener(new View.OnClickListener(){
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                    mainPresenter.enBotonPresionado(txtcedula.getText().toString(),
-                            txtCorreo.getText().toString(),
-                            txtdireccion.getText().toString(),
-                            txtfechanacimiento.getText().toString(),
-                            txtPwd.getText().toString(),
-                            txttarjeta.getText().toString(),
-                            txttelefono.getText().toString(),
-                            txtUser.getText().toString(),
-                            txtNombre.getText().toString()
-                            );
+                mainPresenter.enBotonPresionado(txtcedula.getText().toString(),
+                        txtCorreo.getText().toString(),
+                        txtdireccion.getText().toString(),
+                        txtfechanacimiento.getText().toString(),
+                        txtPwd.getText().toString(),
+                        txttarjeta.getText().toString(),
+                        txttelefono.getText().toString(),
+                        txtUser.getText().toString(),
+                        txtNombre.getText().toString(),
+                        ""
+                );
+
+
             }
         });
 
@@ -66,6 +69,13 @@ public class RegistrarClienteActivity extends AppCompatActivity implements Regis
     @Override
     public void navegarMainActivity() {
         startActivity(new Intent(this, MainActivity.class));
+    }
+
+    @Override
+    public void navegarRegistrarClienteCodigoActivity() {
+        Intent pasarDatos = new Intent(RegistrarClienteActivity.this, RegistrarClienteCodigoActivity.class);
+        pasarDatos.putExtra("cedula", txtcedula.getText().toString());
+        startActivity(pasarDatos);
     }
 
 

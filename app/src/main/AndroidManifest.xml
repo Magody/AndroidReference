@@ -35,10 +35,18 @@
 
         <activity
             android:name=".ModuloGeografia.DireccionDeEntregaActivity"
+
             android:label="@string/textoDireccionDeEntrega"/>
         <activity 
             android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
             android:label="RegistrarCliente"/>
+
+        <activity
+
+            android:name=".MainActivity"/>
+
+
+  
         <activity
             android:name=".ModuloSeguimiento.CarritoActivity"
             android:label="Carrito"/>
@@ -49,8 +57,9 @@
             android:name=".ModuloSeguimiento.CambiarEstadosActivity"
             android:label="CambiarEstados"/>
         <activity
-
-            android:name=".MainActivity"/>
+            android:name=".Modelos.RegistroUsuarios.RegistrarClienteCodigoActivity"
+            android:label="RegistrarClienteCodigo"/>
+       
         <activity
             android:name=".ModuloEntregador.EntregadorActivity"
             android:screenOrientation="portrait">
