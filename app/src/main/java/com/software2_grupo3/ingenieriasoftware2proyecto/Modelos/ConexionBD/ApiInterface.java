@@ -39,7 +39,7 @@ public interface ApiInterface {
                                @Field("codigoVerificacion") String codigoVerificacion);
     @FormUrlEncoded
     @POST(Parametros.DIRECTORIO_PROYECTO +Parametros.DIRECTORIO_MODULO_REGISTROCLIENTE +"codigoDeVerificacionCliente.php")
-    Call<Cliente> crearCodigoCliente(@Field("codigoVerificacion") String codigoVerificacion,
+    Call<Respuesta> crearCodigoCliente(@Field("codigoVerificacion") String codigoVerificacion,
                                      @Field("cedula") String cedula);
 /*
     @FormUrlEncoded

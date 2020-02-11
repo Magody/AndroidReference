@@ -7,6 +7,7 @@ import android.util.Log;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Cliente;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiClient;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.ConexionBD.ApiInterface;
+import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Respuesta;
 import com.software2_grupo3.ingenieriasoftware2proyecto.Modelos.Validacion;
 import com.software2_grupo3.ingenieriasoftware2proyecto.R;
 
@@ -14,9 +15,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.util.Log.d;
+
 public class RegistrarClienteCodigoInteractor implements RegistrarClienteCodigoContracts.Interactor{
 
-    public static final String TAG = "RegistrarClienteCodigoInteractor";
+    public static final String TAG = "RCCodigoInteractor";
     Context context;
 
     RegistrarClienteCodigoContracts.Presentador callbackRegistrarClienteCodigoPresentador;
@@ -39,24 +42,27 @@ public class RegistrarClienteCodigoInteractor implements RegistrarClienteCodigoC
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         final int[] resultado = new int[1]; //probar
-        Call<Cliente> call;
+        Call<Respuesta> call;
         call = apiInterface.crearCodigoCliente(codigoVerificacion, cedula);
-        call.enqueue(new Callback<Cliente>() {
+        call.enqueue(new Callback<Respuesta>() {
             @Override
-            public void onResponse(Call<Cliente> call, Response<Cliente> response) {
+            public void onResponse(Call<Respuesta> call, Response<Respuesta> response) {
+
+                d(TAG, "onResponse: " + response.body());
+
                 if (response.isSuccessful() && response.body() != null) {
 
-                    final Cliente cliente = response.body();
+                    final Respuesta cliente = response.body();
 
                     callbackRegistrarClienteCodigoPresentador.aceptarExitoso("Correo Verificado");
 
                 } else {
-                    callbackRegistrarClienteCodigoPresentador.aceptarFallido(context.getString(R.string.textoDebug));
+                    callbackRegistrarClienteCodigoPresentador.aceptarFallido("Datos nulos");
                 }
             }
 
             @Override
-            public void onFailure(Call<Cliente> call, Throwable t) {
+            public void onFailure(Call<Respuesta> call, Throwable t) {
                 callbackRegistrarClienteCodigoPresentador.aceptarFallido(t.toString());
                 Log.e(TAG, "RegistrarClienteCodigoInteractor: Onfailure" + t.toString());
             }

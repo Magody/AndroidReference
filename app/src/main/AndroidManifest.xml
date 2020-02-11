@@ -13,14 +13,24 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ModuloHome.DetalleProductoActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".InicioActivity">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".ModuloHome.DetalleProductoActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,39 +45,27 @@
 
         <activity
             android:name=".ModuloGeografia.DireccionDeEntregaActivity"
-
-            android:label="@string/textoDireccionDeEntrega"/>
-        <activity 
-            android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
-            android:label="RegistrarCliente"/>
-
+            android:label="@string/textoDireccionDeEntrega" />
         <activity
-
-            android:name=".MainActivity"/>
-
-
-  
+            android:name=".Modelos.RegistroUsuarios.RegistrarClienteActivity"
+            android:label="RegistrarCliente" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".ModuloSeguimiento.CarritoActivity"
-            android:label="Carrito"/>
+            android:label="Carrito" />
         <activity
             android:name=".ModuloSeguimiento.SeguimientoActivity"
-            android:label="Seguimiento"/>
+            android:label="Seguimiento" />
         <activity
             android:name=".ModuloSeguimiento.CambiarEstadosActivity"
-            android:label="CambiarEstados"/>
+            android:label="CambiarEstados" />
         <activity
             android:name=".Modelos.RegistroUsuarios.RegistrarClienteCodigoActivity"
-            android:label="RegistrarClienteCodigo"/>
-       
+            android:label="RegistrarClienteCodigo" />
         <activity
             android:name=".ModuloEntregador.EntregadorActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
+
 </manifest>

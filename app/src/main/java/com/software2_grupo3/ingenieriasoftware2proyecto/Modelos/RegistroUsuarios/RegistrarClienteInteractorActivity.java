@@ -16,7 +16,7 @@ import retrofit2.Response;
 
 public class RegistrarClienteInteractorActivity extends RegistrarClienteActivity implements RegistrarClienteContracts.Interactor {
 
-    public static final String TAG = "RegistrarClienteInteractor";
+    public static final String TAG = "ReInteractorActivity";
 
     Context context;
 
